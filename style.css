@@ -33,6 +33,7 @@ h1 {
     border: 10px solid black;
     margin: 15px 8px;
     cursor: pointer;
+    outline: none;
 }
 
 .btn-container {
