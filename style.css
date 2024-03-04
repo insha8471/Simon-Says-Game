@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    text-align: center;
+    background: #e8e5e5;
+    height: 00vh;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.header {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+/* .gameStatus {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+} */
+
+.btn {
+    height: 150px;
+    width: 150px;
+    border-radius: 20%;
+    border: 10px solid black;
+    margin: 15px 8px;
+    cursor: pointer;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#start-btn button{
+    margin-top: 20px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #e8e5e5;
+    /* background-color: #FDE12D; */
+    border: 2px solid #f99b45;
+    cursor: pointer;
+}
+
+#game-over{
+    background-color: black;
+    color: #fff;
+    height: 150px;
+    position: relative;
+    bottom: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+#game-over p{
+    font-size: 50px;
+    font-family: cursive;
+}
+
+#game-over span {
+    margin: 5px;
+    font-size: 10px;
+}
+
+#game-over button {
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.yellow {
+    background-color: #f99b45;
+}
+
+.red {
+    background-color: #d9547c;
+}
+
+.purple {
+    background-color: #7998f8;
+}
+
+.green {
+    background-color: #5eacc3;
+}
+
+.flash {
+    background-color: #fff;
+}
