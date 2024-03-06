@@ -8,14 +8,26 @@ let level = 0;
 
 // let gameStatus = document.querySelector('.gameStatus');
 
-let startBtn = document.querySelector("#start-btn");
+// let startBtn = document.querySelector("#start-btn");
 
-startBtn.addEventListener("click", function(e) {
-    if(started == false){
-        started = true;
-        levelUp();
-    }
-});
+// startBtn.addEventListener("click", function(e) {
+//     if(started == false){
+//         started = true;
+//         levelUp();
+//     }
+// });
+
+let landingArea = document.querySelector(".landing-area");
+let playBtn = document.querySelector("#play-btn");
+playBtn.addEventListener("click", ()=>{
+    landingArea.style.visibility = "hidden";
+    setTimeout(() => {
+        if(started == false){
+            started = true;
+            levelUp();
+        }
+    }, 700)
+})
 
 function btnFlash(btn) {
     btn.classList.add("flash");
@@ -78,12 +90,18 @@ function checkAns(idx) {
     }
 }
 
-
+//game over
 let backGame = document.querySelector("#back-game");
 backGame.addEventListener("click", ()=> {
     let gameOver = document.querySelector("#game-over");
     gameOver.style.visibility = "hidden";
-    reset();
+    
+    setTimeout(() => {
+        if(started == false){
+            started = true;
+            levelUp();
+        }
+    }, 700)
 })
 
 
@@ -109,3 +127,44 @@ function reset() {
     userSeq = [];
     level = 0;
 }
+
+
+
+/*********************************************************************************/
+
+ //landing page
+
+ let headingColor = ["blue", "red", "green", "brown", "orange", "lightblue", "beige","yellow"];
+
+ let heading = document.querySelector(".heading");
+
+ function colorChange(){
+     let randomIdx = Math.floor(Math.random()*8);
+     let colorV = headingColor[randomIdx];
+     heading.style.color = colorV;    
+ }
+ 
+ setInterval(() => {
+     colorChange();
+ }, 1000);
+
+
+ //quit and reset
+
+ let quitBtn = document.querySelector("#quit");
+ let resetBtn = document.querySelector("#reset");
+
+ quitBtn.addEventListener("click", () => {
+    landingArea.style.visibility = "visible";
+    reset();
+ })
+
+ resetBtn.addEventListener("click", () => {
+    reset();
+    setTimeout(() => {
+        if(started == false){
+            started = true;
+            levelUp();
+        }
+    }, 700)
+ })

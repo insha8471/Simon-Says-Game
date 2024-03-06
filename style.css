@@ -2,12 +2,17 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     text-align: center;
     background: #e8e5e5;
-    height: 00vh;
+    /* height: 100vh; */
+}
+
+.main-area {
+    height: 90vh;
 }
 
 h1 {
@@ -33,6 +38,10 @@ h1 {
     border: 10px solid black;
     margin: 15px 8px;
     cursor: pointer;
+}
+
+.btn {
+    box-shadow: none;
     outline: none;
 }
 
@@ -44,23 +53,30 @@ h1 {
 }
 
 #start-btn button{
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 10px 40px;
     border-radius: 10px;
     font-size: 1rem;
     font-weight: 600;
     background-color: #e8e5e5;
     /* background-color: #FDE12D; */
-    border: 2px solid #f99b45;
+    /* border: 2px solid #f99b45; */
+    border: none;
     cursor: pointer;
+    background: transparent;
 }
 
+#start-btn :last-child {
+    margin-left: 40px;
+}
+
+/***************************************** gameOver area ***********************************************/
 #game-over{
     background-color: black;
     color: #fff;
-    height: 150px;
+    height: 250px;
     position: relative;
-    bottom: 350px;
+    bottom: 360px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,22 +85,26 @@ h1 {
 }
 
 #game-over p{
-    font-size: 50px;
+    font-size: 6rem;
     font-family: cursive;
 }
 
 #game-over span {
     margin: 5px;
-    font-size: 10px;
+    font-size: 1rem;
+    font-style: italic;
 }
 
 #game-over button {
     padding: 5px 20px;
     border-radius: 5px;
+    font-size: 1.3rem;
     border: none;
     margin-top: 10px;
     cursor: pointer;
 }
+
+/******************************** game over end  ***************************************/
 
 .yellow {
     background-color: #f99b45;
@@ -104,4 +124,48 @@ h1 {
 
 .flash {
     background-color: #fff;
+}
+
+
+
+/******************************************************************************************/
+/* Landing container */
+
+
+
+.landing-area {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    color: #fff;
+    /* visibility: hidden; */
+}
+
+.heading {
+    font-size: 12rem;
+    font-style: oblique;
+    font-weight: 900;
+}
+
+
+.content :first-child {
+    font-size: 1.8rem;
+}
+
+.content :nth-child(2) {
+    margin-top: 25px;
+    font-size: 1.3rem;
+    line-height: 25px;
+    margin-bottom: 35px;
+}
+
+.content :last-child{
+    display: inline;
+    font-size: 3rem;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }

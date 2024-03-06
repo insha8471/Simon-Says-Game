@@ -4,34 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon Game</title>
+    <link rel="icon" href="">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Simon Game</h1>
-    <div class="header">
-        <p class="rightSide">Highest Score: <span class="highest-scr">0</span></p>
-        <!-- <p class="gameStatus"></p> -->
-        <p class="left-side">Your Score: <span class="your-scr">0</span></p>
-    </div>
-    <div class="btn-container">
-        <div class="line-one">
-            <div class="btn red" type="button" id="red"></div>
-            <div class="btn yellow" type="button" id="yellow"></div>
+    <div class="landing-area">
+        <h1 class="heading">Simon</h1>
+        <div class="content">
+            <p>Do What Simon Says ...</p>
+            <p>Follow the pattern for as long <br> as you can... if you can!</p>
+            
+            <!-- <a href="index.html" target="_self" id="play-btn">:: Play ::</a> -->
+            <p id="play-btn">:: Play ::</p>
         </div>
-        <div class="line-two">
-            <div class="btn green" type="button" id="green"></div>
-            <div class="btn purple" type="button" id="purple"></div>
+    </div>
+    <div class="main-area">
+        <h1>Simon Game</h1>
+        <div class="header">
+            <p class="rightSide">Highest Score: <span class="highest-scr">0</span></p>
+            <!-- <p class="gameStatus"></p> -->
+            <p class="left-side">Your Score: <span class="your-scr">0</span></p>
         </div>
-        
-    </div>
-    <div id="start-btn">
-            <button>start</button>
-    </div>
+        <div class="btn-container">
+            <div class="line-one">
+                <div class="btn red" type="button" id="red"></div>
+                <div class="btn yellow" type="button" id="yellow"></div>
+            </div>
+            <div class="line-two">
+                <div class="btn green" type="button" id="green"></div>
+                <div class="btn purple" type="button" id="purple"></div>
+            </div>
+            
+        </div>
+        <div id="start-btn">
+                <button id="quit">quit</button>
+                <button id="reset">reset</button>
+                <!-- <p>quit</p> -->
+        </div>
 
-    <div id="game-over">
-        <p>Game Over</p>
-        <span>Play again</span>
-        <button id="back-game">click</button>
+        <div id="game-over">
+            <p>Game Over</p>
+            <span>Play again</span>
+            <button id="back-game">click</button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
