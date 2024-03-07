@@ -169,3 +169,51 @@ h1 {
     text-decoration: none;
     cursor: pointer;
 }
+
+
+
+/**********************************************************************88*/
+
+@media (width < 440px) {
+
+    .heading {
+        margin-top: 100px;
+        font-size: 7rem;
+    }
+
+    .content :first-child {
+        margin-top: 40px;
+        font-size: 1.4rem;
+    }
+
+    .content :nth-child(2) {
+        font-size: 1.2rem;
+        margin-top: 30px;
+        margin-bottom: 70px;
+    }
+
+    #play-btn {
+        margin-top: 100px;
+    }
+}
+
+@media (width < 400px){
+    .heading {
+        font-size: 6rem;
+    }
+}
+
+@media (width < 281px){
+    .btn {
+        height: 120px;
+        width: 120px;
+        border-radius: 20%;
+        border: 10px solid black;
+        margin: 15px 8px;
+        cursor: pointer;
+    }
+
+    .heading {
+        font-size: 4rem;
+    }
+}
